@@ -25,10 +25,10 @@
       <div class="header__nav">
         <input type="checkbox" id="mob-nav" class="header__nav-input">
         <nav class="header__nav-list" id="nav-bar">
-          <li class="header__nav-item"><a href="#contactus" class="header__nav-link" id="nav-link">Talk to us</a></li>
-          <li class="header__nav-item"><a href="#aboutus" class="header__nav-link" id="nav-link">About Us</a></li>
-          <li class="header__nav-item"><a href="#gallery" class="header__nav-link" id="nav-link">Gallery</a></li>
-          <li class="header__nav-item"><a href="#cta" class="header__nav-link" id="nav-link">Book Now</a></li>
+          <li class="header__nav-item"><a href="#contactus" class="header__nav-link nav-link">Talk to us</a></li>
+          <li class="header__nav-item"><a href="#aboutus" class="header__nav-link nav-link">About Us</a></li>
+          <li class="header__nav-item"><a href="#gallery" class="header__nav-link nav-link">Gallery</a></li>
+          <li class="header__nav-item"><a href="#cta" class="header__nav-link nav-link">Book Now</a></li>
         </nav>
         <label for="mob-nav" class="header__nav-label">
           <div class="header__nav-back">&nbsp;</div>
@@ -270,13 +270,14 @@
     <footer class="footer">
         <div class="footer__subscribe">
             <h3>Subscribe to our mailing list.</h3>
-            <form class="form" id="form"> 
+            <form class="form" id="form" action="https://www.freecodecamp.com/email-submit"> 
                 <input id="email" class="form__mailbox form__mailbox-footer"
                   name="contact email"
                   type="email"
                   placeholder="Enter Your Email Id"
                 />
-                <button id="submit" class="form__btn form__btn-footer" type="submit">
+              <input id="submit" type="submit" style="visibility:hidden; width: 0;height: 0;opacity:0">
+                <button class="form__btn form__btn-footer" type="submit">
                     
                     <span class="form__btn-visible">Subscribe</span>
                     <svg class="form__btn-invisible-1">
