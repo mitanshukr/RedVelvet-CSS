@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
       rel="stylesheet"
@@ -17,18 +18,18 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header" id="header">
     
-      <img class="header__logo" alt="main logo" src="img/svg/com-logo.svg">
+      <img class="header__logo" id="header-img" alt="main logo" src="img/svg/com-logo.svg">
       <h1 class="heading-1 header__name">Red Velvet<sup>TM</sup></h1>
 
       <div class="header__nav">
         <input type="checkbox" id="mob-nav" class="header__nav-input">
-        <nav class="header__nav-list">
-          <li class="header__nav-item"><a href="#contactus" class="header__nav-link">Talk to us</a></li>
-          <li class="header__nav-item"><a href="#aboutus" class="header__nav-link">About Us</a></li>
-          <li class="header__nav-item"><a href="#gallery" class="header__nav-link">Gallery</a></li>
-          <li class="header__nav-item"><a href="#cta" class="header__nav-link">Book Now</a></li>
+        <nav class="header__nav-list" id="nav-bar">
+          <li class="header__nav-item"><a href="#contactus" class="header__nav-link" id="nav-link">Talk to us</a></li>
+          <li class="header__nav-item"><a href="#aboutus" class="header__nav-link" id="nav-link">About Us</a></li>
+          <li class="header__nav-item"><a href="#gallery" class="header__nav-link" id="nav-link">Gallery</a></li>
+          <li class="header__nav-item"><a href="#cta" class="header__nav-link" id="nav-link">Book Now</a></li>
         </nav>
         <label for="mob-nav" class="header__nav-label">
           <div class="header__nav-back">&nbsp;</div>
@@ -258,7 +259,7 @@
       <figure class="gallery__item gallery__item--12"><img src="img/gallery-12.jpg" alt="Gallery Image 12" class="gallery__img"></figure>
 
       <div class="gallery__video">
-        <iframe class="gallery__video-frame"src="https://www.youtube.com/embed/3Pa4HQVAxqM" 
+        <iframe id="video" class="gallery__video-frame"src="https://www.youtube.com/embed/3Pa4HQVAxqM" 
       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
       gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
@@ -270,14 +271,13 @@
     <footer class="footer">
         <div class="footer__subscribe">
             <h3>Subscribe to our mailing list.</h3>
-            <form class="form"> 
-                <input
-                  class="form__mailbox form__mailbox-footer"
+            <form class="form" id="form"> 
+                <input id="email" class="form__mailbox form__mailbox-footer"
                   name="contact email"
                   type="email"
                   placeholder="Enter Your Email Id"
                 />
-                <button class="form__btn form__btn-footer" type="submit">
+                <button id="submit" class="form__btn form__btn-footer" type="submit">
                     
                     <span class="form__btn-visible">Subscribe</span>
                     <svg class="form__btn-invisible-1">
