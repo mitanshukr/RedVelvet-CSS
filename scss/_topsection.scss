@@ -1,0 +1,168 @@
+.topsection {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-blue, .9),
+      rgba($color-red-dark-3, 0.6)
+    ),
+    url(../img/top.jpg);
+  background-size: cover;
+  grid-column: full-start / full-end;
+  background-position: bottom;
+  position: relative;
+  color: rgba($color-red-light-1, .8);
+
+
+  h1 {
+    margin-top: 2rem;
+    text-align: center;
+    font-family: stay-classy, sans-serif;
+    font-weight: bold;
+    font-size: 20rem;
+    letter-spacing: 1rem;
+    line-height: 1;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-text-stroke: 4px rgba(255,255,255, 0.5);
+
+    @media (max-width: $bp-500){
+      font-size: 15rem;
+    }
+
+    @media (max-width: 300px){
+      font-size: 14rem;
+      left: 43%;
+    }
+    
+  }
+
+  &__heart {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    & > * {
+        backface-visibility: hidden;
+        fill: $color-red-light-1;
+        width: 2.5rem;
+        height: 2.5rem;
+        position: absolute;
+        top: 90px;
+    }
+
+    &-1 {
+       
+        left: 230px;
+        animation: heartfly-top 4s linear infinite;
+
+        @media (max-width: $bp-700){
+          left: 150px;
+          }
+
+          @media (max-width: $bp-500){
+            left: 100px;
+            }
+        }
+
+    &-2 {
+        left: 228px;
+        animation: heartfly-top 4.5s linear infinite;
+
+        @media (max-width: $bp-700){
+          left: 152px;
+          }
+
+          @media (max-width: $bp-500){
+            left: 102px;
+            }
+    }
+
+    &-3 {
+        left: 226px;
+        animation: heartfly-top 2s linear infinite;
+        @media (max-width: $bp-700){
+          left: 148px;
+          }
+
+          @media (max-width: $bp-500){
+            left: 98px;
+            }
+    }
+
+    &-4 {
+       
+        left: 232px;
+        animation: heartfly-top 2.5s linear infinite;
+        @media (max-width: $bp-700){
+          left: 154px;
+          }
+
+          @media (max-width: $bp-500){
+            left: 104px;
+            }
+    }
+
+    &-5 {
+        left: 234px;
+        animation: heartfly-top 3s linear infinite;
+        @media (max-width: $bp-700){
+          left: 146px;
+          }
+
+          @media (max-width: $bp-500){
+            left: 106px;
+            }
+    }
+
+    &-6 {
+        left: 236px;
+        animation: heartfly-top 3.5s linear infinite;
+        @media (max-width: $bp-700){
+          left: 149px;
+          }
+          @media (max-width: $bp-500){
+            left: 99px;
+            }
+    }
+   
+  }
+}
+
+@keyframes heartfly-top {
+    0% {
+      top: 90px;
+      visibility: visible;
+      opacity: 1;
+    }
+  
+    20% {
+      top: 50px;
+      transform: rotate(25deg) scale(1.5);
+    }
+  
+    30% {
+      top: 20px;
+      transform: rotate(-25deg) scale(1);
+    }
+
+    50% {
+        top: -30px;
+      transform: rotate(20deg) scale(2);
+    }
+  
+    75% {
+      top: -80px;
+      transform: rotate(-25deg) scale(1.5);
+    }
+  
+    100% {
+      top: -120px;
+      visibility: hidden;
+      transform: rotate(20deg) scale(2.5);
+      opacity: 0;
+    }
+  }

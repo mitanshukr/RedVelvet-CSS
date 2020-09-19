@@ -1,0 +1,18 @@
+.contactus {
+    padding: 12rem 3rem;
+    background-color: #fff;
+    color: $color-red-dark-3;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1rem;
+    text-align: center;
+
+    p {
+        color: $color-orange-1;
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+    }
+}

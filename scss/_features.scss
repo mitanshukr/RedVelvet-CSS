@@ -1,0 +1,32 @@
+.features {
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 5rem;
+  justify-items: center;
+
+  padding: 15rem 2rem;
+
+  color: $color-red-dark-2;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(2, min-content);
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
+
+  &__icon {
+    fill: $color-red-dark-2;
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1 / span 2;
+  }
+
+  &__text {
+    color: $color-red-light-1;
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,143 @@
+.cta {
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(
+      rgba($color-red-dark-1, 0.65),
+      rgba($color-red-dark-1, 0.65)
+    ),
+    url(../img/cta.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start]
+    repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  &__grid {
+    grid-column: center-start / center-end;
+    margin: 8rem 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 7rem;
+
+    @media (max-width: $bp-900) {
+      grid-gap: 4rem;
+      margin: 8rem 0;
+    }
+
+    @media (max-width: $bp-500) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__box {
+    padding: 2rem;
+    background-color: rgba($color-blue, 0.8);
+    border-radius: 3px;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: auto-fit;
+    //grid-row-gap: 3rem;
+
+    ul {
+      margin: 5rem 0 3rem 0;
+    }
+
+    li {
+      list-style: none;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 2;
+      color: #fff;
+    }
+
+    h3 {
+      grid-row: 1 / 2;
+      grid-column: 1 / -1;
+      justify-self: center;
+      align-self: end;
+      padding: 1rem;
+      background-color: $color-red-dark-2;
+      z-index: 2;
+      transform: translateY(50%);
+      width: 70%;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    width: 100%;
+    z-index: 1;
+    filter: brightness(70%);
+  }
+
+  &__btn {
+    margin: 0;
+    margin-bottom: 2rem;
+    justify-self: center;
+    width: 60%;
+    height: 4rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 100px;
+    background-color: $color-orange-2;
+    color: $color-red-dark-2;
+    position: relative;
+    transition: all 0.5s;
+    overflow: hidden;
+    backface-visibility: hidden;
+    outline: none;
+
+    & > * {
+      position: absolute;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      padding: 1.2rem 0;
+      transition: all 0.5s;
+    }
+
+    &-visible {
+      top: 0;
+      left: 0;
+    }
+
+    &-invisible {
+        font-size: 1.6rem;
+        font-weight: 700;
+      top: 100%;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &:hover &-visible {
+      top: -100%;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &:hover &-invisible {
+      top: 0;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:hover {
+        background-color: $color-orange-3;
+        color: $color-blue;
+    }
+
+    &:active {
+        transform: translateY(1px);
+        transition: none;
+    }
+  }
+}

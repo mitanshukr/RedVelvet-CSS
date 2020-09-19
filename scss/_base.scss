@@ -1,0 +1,69 @@
+//color palette from www.coolors.co/
+$color-blue: #04061d; //Unknown
+
+$color-red-dark-1: #370618; //Dark Sienna
+$color-red-dark-2: #3b0208; //Dark Sienna
+$color-red-dark-3: #650104; //Blood Red
+
+$color-red-light-1: #d00000; //Rosso Corsa
+$color-red-light-2: #dc2f02; //Vermilion
+
+$color-orange-1: #e85d04; //Persimmon
+$color-orange-2: #f48c06; //Carrot Orange
+$color-orange-3: #faa307; //Orange Web
+$color-orange-4: #ffba08; //Selective Yellow
+
+// FONT VARIABLES
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+
+//breakpoints
+$bp-900: 56.25em; //900px;
+$bp-700: 43.75em; //700px;
+$bp-500: 31.25em; //500px;
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px
+
+  @media (max-width: $bp-900){
+    font-size: 50%;   //8px
+  }
+
+  @media (max-width: $bp-700){
+    font-size: 37.5%;   //6px
+  }
+
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-orange-4;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  margin-top: 6rem;
+  display: grid;
+  //background-color: greenyellow;
+  //grid-gap: 2rem;
+
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start]
+    repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    ) [center-end] minmax(6rem, 1fr) [full-end];
+
+  grid-template-rows: calc(95vh - 6rem);
+}
